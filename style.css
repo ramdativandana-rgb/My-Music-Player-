@@ -1,0 +1,630 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #000;
+    color: white;
+}
+
+
+/* =========================================
+   MAIN PAGE
+========================================= */
+
+.login-page {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    background: #000;
+}
+
+
+/* =========================================
+   LEFT VISUAL SECTION
+========================================= */
+
+.visual-section {
+    width: 56%;
+    min-height: 100vh;
+    position: relative;
+    overflow: hidden;
+    background: #111;
+}
+
+
+/* =========================================
+   MUSIC IMAGE GRID
+========================================= */
+
+.music-grid {
+    position: absolute;
+    inset: -80px;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+
+    transform: rotate(-2deg) scale(1.05);
+}
+
+
+.music-card {
+    min-height: 260px;
+
+    background-size: cover;
+    background-position: center;
+
+    border-radius: 18px;
+}
+
+
+/* Music images */
+
+.card-1 {
+    background-image:
+        url("https://images.unsplash.com/photo-1516280440614-37939bbacd81?auto=format&fit=crop&w=1000&q=80");
+}
+
+
+.card-2 {
+    background-image:
+        url("https://images.unsplash.com/photo-1524368535928-5b5e00ddc76b?auto=format&fit=crop&w=1000&q=80");
+}
+
+
+.card-3 {
+    background-image:
+        url("https://images.unsplash.com/photo-1506157786151-b8491531f063?auto=format&fit=crop&w=1000&q=80");
+}
+
+
+.card-4 {
+    background-image:
+        url("https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?auto=format&fit=crop&w=1000&q=80");
+}
+
+
+.card-5 {
+    background-image:
+        url("https://images.unsplash.com/photo-1511379938547-c1f69419868d?auto=format&fit=crop&w=1000&q=80");
+}
+
+
+.card-6 {
+    background-image:
+        url("https://images.unsplash.com/photo-1524368535928-5b5e00ddc76b?auto=format&fit=crop&w=1000&q=80");
+}
+
+
+/* =========================================
+   DARK OVERLAY
+========================================= */
+
+.visual-overlay {
+    position: absolute;
+    inset: 0;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(0, 0, 0, 0.20),
+            rgba(0, 0, 0, 0.60)
+        );
+
+    z-index: 2;
+}
+
+
+/* =========================================
+   HERO TEXT
+========================================= */
+
+.hero-text {
+    position: absolute;
+
+    left: 48px;
+    bottom: 55px;
+
+    z-index: 5;
+}
+
+
+.hero-text h1 {
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: clamp(42px, 4vw, 70px);
+
+    line-height: 1.05;
+
+    font-style: italic;
+
+    font-weight: 700;
+
+    letter-spacing: -1px;
+
+    margin-bottom: 22px;
+}
+
+
+.hero-text p {
+    font-size: 19px;
+
+    color: #fffefe;
+
+    letter-spacing: 0.3px;
+}
+
+
+/* =========================================
+   RIGHT LOGIN SECTION
+========================================= */
+
+.login-section {
+    width: 44%;
+    min-height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: relative;
+
+    background:
+        radial-gradient(
+            circle at 20% 15%,
+            rgba(255, 0, 100, 0.12),
+            transparent 30%
+        ),
+        linear-gradient(
+            135deg,
+            #050505,
+            #080005,
+            #020202
+        );
+}
+
+
+.login-container {
+    width: min(425px, 86%);
+
+    padding: 30px 0;
+}
+
+
+/* =========================================
+   BRAND
+========================================= */
+
+.brand {
+    display: flex;
+    align-items: center;
+
+    gap: 13px;
+
+    margin-bottom: 42px;
+}
+
+
+.brand-icon {
+    width: 40px;
+    height: 40px;
+
+    border-radius: 11px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: linear-gradient(
+        135deg,
+        #ff176d,
+        #ff2b75
+    );
+
+    font-size: 20px;
+}
+
+
+.brand span {
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 23px;
+
+    font-weight: bold;
+}
+
+
+/* =========================================
+   WELCOME
+========================================= */
+
+.welcome {
+    margin-bottom: 34px;
+}
+
+
+.welcome h2 {
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 34px;
+
+    margin-bottom: 10px;
+}
+
+
+.welcome p {
+    color: #81778f;
+
+    font-size: 15px;
+}
+
+
+/* =========================================
+   SOCIAL BUTTONS
+========================================= */
+
+.social-buttons {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 13px;
+}
+
+
+.social-btn {
+    width: 100%;
+
+    height: 50px;
+
+    border-radius: 13px;
+
+    border: 1px solid #29232b;
+
+    background: #0b0b0c;
+
+    color: #eee;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 14px;
+
+    cursor: pointer;
+
+    transition: 0.25s ease;
+}
+
+
+.social-btn:hover {
+    background: #151216;
+
+    border-color: #4b3543;
+}
+
+
+.google-icon {
+    font-size: 20px;
+
+    font-weight: bold;
+
+    font-family: Arial;
+}
+
+
+.apple-icon {
+    font-size: 16px;
+}
+
+
+/* =========================================
+   DIVIDER
+========================================= */
+
+.divider {
+    display: flex;
+
+    align-items: center;
+
+    gap: 14px;
+
+    margin: 27px 0;
+}
+
+
+.divider span {
+    height: 1px;
+
+    flex: 1;
+
+    background: #211c22;
+}
+
+
+.divider p {
+    color: #4e4653;
+
+    font-size: 12px;
+}
+
+
+/* =========================================
+   FORM
+========================================= */
+
+.form-group {
+    margin-bottom: 21px;
+}
+
+
+.form-group label {
+    display: block;
+
+    font-size: 13px;
+
+    color: #82788f;
+
+    margin-bottom: 9px;
+}
+
+
+.form-group input {
+    width: 100%;
+
+    height: 52px;
+
+    border-radius: 13px;
+
+    border: 1px solid #35222e;
+
+    outline: none;
+
+    background: #0b0b0c;
+
+    color: white;
+
+    padding: 0 17px;
+
+    font-size: 14px;
+
+    transition: 0.2s;
+}
+
+
+.form-group input::placeholder {
+    color: #68606e;
+}
+
+
+.form-group input:focus {
+    border-color: #ff2673;
+
+    box-shadow:
+        0 0 0 2px rgba(255, 38, 115, 0.08);
+}
+
+
+/* =========================================
+   PASSWORD LABEL
+========================================= */
+
+.password-label {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+}
+
+
+.password-label label {
+    margin-bottom: 9px;
+}
+
+
+.forgot {
+    font-size: 12px;
+
+    color: #ff2673;
+
+    text-decoration: none;
+
+    margin-bottom: 9px;
+}
+
+
+.forgot:hover {
+    text-decoration: underline;
+}
+
+
+/* =========================================
+   PASSWORD BOX
+========================================= */
+
+.password-box {
+    position: relative;
+}
+
+
+.password-box input {
+    padding-right: 65px;
+}
+
+
+.show-password {
+    position: absolute;
+
+    right: 15px;
+
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    background: none;
+
+    border: none;
+
+    color: #45305b;
+
+    cursor: pointer;
+
+    font-size: 12px;
+}
+
+
+/* =========================================
+   SIGN IN BUTTON
+========================================= */
+
+.signin-btn {
+    width: 100%;
+
+    height: 50px;
+
+    border: none;
+
+    border-radius: 13px;
+
+    background: linear-gradient(
+        90deg,
+        #ff2876,
+        #ff286f
+    );
+
+    color: white;
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    margin-top: 2px;
+
+    transition: 0.25s ease;
+
+    box-shadow:
+        0 8px 25px rgba(255, 25, 105, 0.12);
+}
+
+
+.signin-btn:hover {
+    transform: translateY(-1px);
+
+    box-shadow:
+        0 10px 30px rgba(255, 25, 105, 0.22);
+}
+
+
+.signin-btn:active {
+    transform: translateY(0);
+}
+
+
+/* =========================================
+   SIGN UP
+========================================= */
+
+.signup {
+    text-align: center;
+
+    margin-top: 29px;
+
+    font-size: 13px;
+
+    color: #5f5667;
+}
+
+
+.signup a {
+    color: #00d9e8;
+
+    text-decoration: none;
+
+    font-weight: 600;
+
+    margin-left: 3px;
+}
+
+
+.signup a:hover {
+    text-decoration: underline;
+}
+
+
+/* =========================================
+   GUEST LOGIN
+========================================= */
+
+.guest-login {
+    text-align: center;
+
+    margin-top: 32px;
+}
+
+
+.guest-login a {
+    color: #312637;
+
+    text-decoration: none;
+
+    font-size: 12px;
+
+    transition: 0.2s;
+}
+
+
+.guest-login a:hover {
+    color: #716074;
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 900px) {
+
+    .visual-section {
+        display: none;
+    }
+
+    .login-section {
+        width: 100%;
+    }
+
+    .login-container {
+        width: min(430px, 88%);
+    }
+
+}
+
+
+@media (max-width: 500px) {
+
+    .login-container {
+        width: 88%;
+    }
+
+    .brand {
+        margin-bottom: 30px;
+    }
+
+    .welcome h2 {
+        font-size: 30px;
+    }
+
+}
